@@ -1,0 +1,20 @@
+<html style="background-color: black;">
+
+<p style="color: white;">Login page</p>
+
+<% if flash[:error] %>
+   <div style="background-color: red;" class="notice"><%= flash[:error] %></div>
+<% end %>
+
+<%= form_with scope: :user, url: "/login", local: true do |f| %>
+
+<p style="color: white;">
+<%= f.email_field :mail, placeholder: "example@example.com", :required => true %><br>
+</p>
+
+<p style="color: white;">
+<%= f.password_field :password, placeholder: "Secret Password", :required => true %><br>
+</p>
+
+<%= f.submit 'Login' %>
+<% end %>

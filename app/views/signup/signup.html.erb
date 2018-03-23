@@ -1,0 +1,28 @@
+<html style="background-color: black">
+<%= form_for User.new do |form| %>
+
+  <p style="color: white">
+    <%= form.label :förnamn %><br>
+    <%= form.text_field :förnamn, :required => true %>
+  </p>
+
+  <p style="color: white">
+    <%= form.label :efternamn %><br>
+    <%= form.text_field :efternamn, :required => true %>
+  </p>
+
+  <p style="color: white">
+    <%= form.label :mail %><br>
+    <%= form.email_field :mail, :required => true %>
+  </p>
+
+  <p style="color: white">
+    <%= form.label :password %><br>
+    <%= form.password_field :password, :required => true %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+</html>

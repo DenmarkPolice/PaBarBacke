@@ -1,0 +1,20 @@
+<html style="background-color: black">
+
+  <h1 style="color: white">Official homepage</h1>
+
+  <div style="background-color: white; width: 15%; margin-bottom: 50px;">
+
+    <div style="display: flex">
+      <p style="color: black;">Current session id: </p>
+      <p style="color: black;"> <%= session[:user_id] %> </p>
+    </div>
+
+    <div style="display: flex">
+      <p style="color: black;">Current user base: </p>
+      <p style="color: black;"> <%= count_db %> </p>
+    </div>
+
+  </div>
+
+  <%= button_to "Login", '/login' %>
+</html>
