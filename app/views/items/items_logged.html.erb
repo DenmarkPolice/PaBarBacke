@@ -1,0 +1,29 @@
+<html style="background-color: black;">
+  <%= stylesheet_link_tag "items" %>
+  <h2 style="color: white;">Items for sale</h2>
+
+  <div class="corner">
+    <div class="bag_div">
+      <img class="bag" src=" <%= image_path("bag.jpg") %> ">
+      <div class="bag_buttons">
+        
+        <%= form_tag("/items/rm", method: "post") do %>
+          <%= hidden_field_tag(:bags) %>
+          <%= submit_tag('-', class: "btn") %>
+        <% end %>
+
+        <p class="value">
+          <%= bags %>
+        </p>
+
+        <%= form_tag("/items/add", method: "post") do %>
+          <%= hidden_field_tag(:bags) %>
+          <%= submit_tag('+', class: "btn") %>
+        <% end %>
+
+          </div>
+        </div>
+    </div>
+  </div>
+
+</html>

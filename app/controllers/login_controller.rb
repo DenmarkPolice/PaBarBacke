@@ -1,5 +1,4 @@
 class LoginController < ApplicationController
-  require 'byebug'
   def index
     render :login
   end

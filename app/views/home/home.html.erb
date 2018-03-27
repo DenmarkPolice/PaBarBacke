@@ -1,5 +1,5 @@
 <html style="background-color: black">
-
+  <%= stylesheet_link_tag "home" %>
   <h1 style="color: white">Official homepage</h1>
 
   <div style="background-color: white; width: 15%; margin-bottom: 50px;">
@@ -15,6 +15,10 @@
     </div>
 
   </div>
-
-  <%= button_to "Login", '/login' %>
+  <% if session[:user_id] == nil %>
+    <%= button_to "Login", 'login', method: :get, class: "btn" %>
+    <%= button_to "Signup", 'signup', method: :get, class: "btn" %>
+  <% else %>
+    <%= button_to "Logout", '/logout' %>
+  <% end %>
 </html>

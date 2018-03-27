@@ -15,6 +15,11 @@
 </p>
 
 <p style="color: white">
+  <strong>Påsar:</strong>
+  <%= @user.bags.round(0)%>
+</p>
+
+<p style="color: white">
   <strong>Lösenord(krypterat):</strong>
   <%= @user.password %>
 </p>
