@@ -3,8 +3,27 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 html {
-  padding: 0;
+  background-color: white;
+  padding-left: 300px;
+  padding-right: 300px;
   margin: 0;
+  border: 0px;
+  border-collapse: collapse;
+}
+
+body {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: black;
+  height: 100%;
+  position: relative;
+}
+
+h2 {
+  color: white;
+  margin: 0;
+  padding: 20px;
 }
 
 .corner {

@@ -1,12 +1,12 @@
-<html style="background-color: black;">
+<html>
   <%= stylesheet_link_tag "items" %>
-  <h2 style="color: white;">Items for sale</h2>
+  <h2>På Bar Backe Påse</h2>
 
   <div class="corner">
     <div class="bag_div">
       <img class="bag" src=" <%= image_path("bag.jpg") %> ">
       <div class="bag_buttons">
-        
+
         <%= form_tag("/items/rm", method: "post") do %>
           <%= hidden_field_tag(:bags) %>
           <%= submit_tag('-', class: "btn") %>
@@ -23,6 +23,22 @@
 
           </div>
         </div>
+        <%= form_tag charges_path do %>
+          <article>
+            <% if flash[:error].present? %>
+              <div id="error_explanation">
+                <p><%= flash[:error] %></p>
+              </div>
+            <% end %>
+          </article>
+
+          <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                  data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                  data-description="På Bar Backe Påsar"
+                  data-amount="8000"
+                  data-locale="auto"></script>
+        <% end %>
+
     </div>
   </div>
 

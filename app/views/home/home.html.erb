@@ -1,24 +1,69 @@
-<html style="background-color: black">
-  <%= stylesheet_link_tag "home" %>
-  <h1 style="color: white">Official homepage</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <%= stylesheet_link_tag "home" %>
+    <%= javascript_include_tag('modal.js') %>
+    <%= javascript_include_tag('parallax.js') %>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
 
-  <div style="background-color: white; width: 15%; margin-bottom: 50px;">
+  <body>
+    <!-- Nav bar with icons -->
+    <nav>
+      <div class="nav-wrapper white">
+        <a class="black-text padding-left logo">På Bar Backe</a>
+        <ul class="right hide-on-med-and-down padding-right">
+          <li><a href="/" class="black-text"><i class="material-icons left black-text">home</i>Hem</a></li>
+          <li><a href="badges.html" class="black-text"><i class="material-icons left">remove_red_eye</i>Vision</a></li>
+          <li><a href="/items" class="black-text"><i class="material-icons left">shopping_cart</i>Produkt</a></li>
+          <% if session[:user_id] == nil %>
+            <li><a href="#modal" class="modal-trigger black-text"><i class="material-icons left ">person</i>Logga in</a></li>
+          <% else %>
+            <li><a href="/logout" class="black-text"><i class=" material-icons left">exit_to_app</i>Logga ut</a></li>
+          <% end %>
+        </ul>
+      </div>
+    </nav>
 
-    <div style="display: flex">
-      <p style="color: black;">Current session id: </p>
-      <p style="color: black;"> <%= session[:user_id] %> </p>
+    <!-- Modal with login form -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <% if flash[:error] %>
+          <div style="background-color: red;" class="notice"><%= flash[:error] %></div>
+        <% end %>
+
+        <%= form_with scope: :user, url: "/login", local: true do |f| %>
+
+        <div class="input-field col s6">
+          <i class="material-icons prefix">email</i>
+          <%= f.label :mail %>
+          <%= f.email_field :mail, :required => true %><br>
+        </div>
+
+        <div class="input-field col s6">
+          <i class="material-icons prefix">account_balance_wallet</i>
+          <%= f.label :password %>
+          <%= f.password_field :password, :required => true %><br>
+        </div>
+
+        <%= f.submit 'Login', :class => 'modal-action modal-close btn deep-orange darken-2' %>
+        <% end %>
+      </div>
     </div>
 
-    <div style="display: flex">
-      <p style="color: black;">Current user base: </p>
-      <p style="color: black;"> <%= count_db %> </p>
+    <!-- Parallax img -->
+    <div class="parallax-container">
+      <div class="parallax"><img src="<%= asset_path("logga.jpg") %>"></div>
     </div>
 
-  </div>
-  <% if session[:user_id] == nil %>
-    <%= button_to "Login", 'login', method: :get, class: "btn" %>
-    <%= button_to "Signup", 'signup', method: :get, class: "btn" %>
-  <% else %>
-    <%= button_to "Logout", '/logout' %>
-  <% end %>
+    <!-- Parallax Text -->
+    <div class="section white text">
+      <div class="row container ">
+        <h2 class="header">Vårt Arbete</h2>
+        <p class="grey-text text-darken-3 lighten-3"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ligula nisl, auctor elementum leo quis, fringilla commodo ipsum. Suspendisse urna tellus, maximus at turpis ut, consectetur porta nibh. Integer dictum laoreet lectus et tristique. Sed tincidunt fringilla purus nec tincidunt. Suspendisse id mattis tortor, vitae pretium erat. Cras finibus urna tortor, ut aliquam ligula tristique ac. Nam euismod neque urna, sit amet ornare purus accumsan quis. Etiam vel diam posuere, pretium magna sit amet, mattis lectus. Vestibulum velit velit, pharetra nec posuere a, dapibus id libero. Nullam velit sapien, mattis blandit ex at, vestibulum ornare quam. Vestibulum cursus dui ac orci suscipit sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla viverra nibh vitae volutpat congue. Sed ante metus, maximus at volutpat eleifend, tincidunt eget diam. Fusce efficitur, urna ut egestas dignissim, elit erat scelerisque lectus, eget dictum metus mi in libero. Maecenas massa tortor, feugiat non molestie nec, aliquam sit amet nisi. </p>
+      </div>
+    </div>
+  </body>
 </html>
