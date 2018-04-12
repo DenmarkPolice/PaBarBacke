@@ -22,6 +22,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'materialize-sass'
 gem 'material_icons'
 gem 'jquery-rails'
+gem 'jquery-turbolinks'
 
 
 #Payment gems

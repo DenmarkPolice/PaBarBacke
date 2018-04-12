@@ -4,8 +4,8 @@
     <!-- Nav bar essentials -->
     <%= stylesheet_link_tag "nav_bar" %>
 
-    <!-- Carousel essentials -->
-    <%= javascript_include_tag('carousel.js') %>
+    <!-- sticky sidebar essentials -->
+    <%= javascript_include_tag('sidebar.js') %>
 
     <!-- Footer essentials -->
     <%= stylesheet_link_tag "footer" %>
@@ -38,10 +38,13 @@
     <main>
       <div class="side-text">
         <h3>Välgörenhets-påsen</h3>
-        <button class="btn deep-orange darken-2">Köp nu</button>
+        <h5>80kr</h5>
+        <a href="/payments/new" class="btn deep-orange darken-2">Köp nu</a>
         <div class="cutoff"></div>
-        <p>På Bar Backe's tygpåse är en påse i världsklass. Påsen är producerad i Göteborg i samarbete med Göteborgs stadsmission. I och med att du köper den så går 15kr till hemlösa i Göteborgs området. <b>Tillsammans gör vi skillnad.</b></p>
+          <p>På Bar Backe's tygpåse är en påse i världsklass. Påsen är producerad i Göteborg i samarbete med Göteborgs stadsmission. I och med att du köper den så går 15kr till hemlösa i Göteborgs området. <b>Tillsammans gör vi skillnad.</b></p>
+        </div>
       </div>
+
       <div class="img-container">
         <img src="<%= asset_path("framsida_rotated.jpg") %>">
         <img src="<%= asset_path("baksida_rotated.jpg") %>">
