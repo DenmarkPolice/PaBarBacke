@@ -6,12 +6,10 @@ class User < ApplicationRecord
     include BCrypt
 
     def password
-      p "RANDDDDDDDDDDDDDDDDDDDDDDDDDddd"
       @password ||= Password.new(password_hash)
     end
 
     def password=(new_password)
-      p "RANNNNNNNNNNNNNNNNNNNNN"
       @password = Password.create(new_password)
       self.password_hash = @password
     end

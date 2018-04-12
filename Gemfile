@@ -27,6 +27,7 @@ gem 'jquery-rails'
 #Payment gems
 gem 'stripe'
 gem 'figaro'
+gem 'activemerchant'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

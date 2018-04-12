@@ -11,6 +11,11 @@ Rails.application.config.assets.precompile += %w( items.css )
 Rails.application.config.assets.precompile += %w( home.css )
 Rails.application.config.assets.precompile += %w( modal.js )
 Rails.application.config.assets.precompile += %w( parallax.js )
+Rails.application.config.assets.precompile += %w( footer.css )
+Rails.application.config.assets.precompile += %w( nav_bar.css )
+Rails.application.config.assets.precompile += %w( pay.js )
+Rails.application.config.assets.precompile += %w( payments.css )
+Rails.application.config.assets.precompile += %w( carousel.js )
 
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets

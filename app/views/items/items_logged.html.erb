@@ -1,45 +1,80 @@
 <html>
-  <%= stylesheet_link_tag "items" %>
-  <h2>På Bar Backe Påse</h2>
 
-  <div class="corner">
-    <div class="bag_div">
-      <img class="bag" src=" <%= image_path("bag.jpg") %> ">
-      <div class="bag_buttons">
+  <head>
+    <!-- Nav bar essentials -->
+    <%= stylesheet_link_tag "nav_bar" %>
 
-        <%= form_tag("/items/rm", method: "post") do %>
-          <%= hidden_field_tag(:bags) %>
-          <%= submit_tag('-', class: "btn") %>
-        <% end %>
+    <!-- Carousel essentials -->
+    <%= javascript_include_tag('carousel.js') %>
 
-        <p class="value">
-          <%= bags %>
-        </p>
+    <!-- Footer essentials -->
+    <%= stylesheet_link_tag "footer" %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        <%= form_tag("/items/add", method: "post") do %>
-          <%= hidden_field_tag(:bags) %>
-          <%= submit_tag('+', class: "btn") %>
-        <% end %>
+    <!-- Website essentials -->
+    <%= stylesheet_link_tag "items" %>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
 
+  <body>
+    <!-- Nav bar with icons -->
+    <nav>
+      <div class="nav-wrapper white">
+        <a class="black-text padding-left logo">På Bar Backe</a>
+        <ul class="right hide-on-med-and-down padding-right">
+          <li><a href="/" class="black-text"><i class="material-icons left black-text">home</i>Hem</a></li>
+          <li><a href="/vision" class="black-text"><i class="material-icons left">remove_red_eye</i>Vision</a></li>
+          <li><a href="/items" class="black-text"><i class="material-icons left">shopping_cart</i>Produkt</a></li>
+          <% if session[:user_id] == nil %>
+            <li><a href="#modal" class="modal-trigger black-text"><i class="material-icons left ">person</i>Logga in</a></li>
+          <% else %>
+            <li><a href="/logout" class="black-text"><i class=" material-icons left">exit_to_app</i>Logga ut</a></li>
+          <% end %>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <div class="side-text">
+        <h3>Välgörenhets-påsen</h3>
+        <button class="btn deep-orange darken-2">Köp nu</button>
+        <div class="cutoff"></div>
+        <p>På Bar Backe's tygpåse är en påse i världsklass. Påsen är producerad i Göteborg i samarbete med Göteborgs stadsmission. I och med att du köper den så går 15kr till hemlösa i Göteborgs området. <b>Tillsammans gör vi skillnad.</b></p>
+      </div>
+      <div class="img-container">
+        <img src="<%= asset_path("framsida_rotated.jpg") %>">
+        <img src="<%= asset_path("baksida_rotated.jpg") %>">
+      </div>
+    </main>
+
+    <!-- Footer with Social media and contact -->
+    <footer class="page-footer grey darken-3">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Sociala medier</h5>
+            <ul class="fa-ul">
+              <li><a href="https://www.instagram.com/pabarbackeuf/"><i class="fa fa-instagram"></i></a></li>
+              <li><a href="https://www.facebook.com/pabarbackeuf/"><i class="fa fa-facebook"></i></a></li>
+            </ul>
+          </div>
+
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Kontakta oss</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3">Origovägen 4</a></li>
+              <li><a class="grey-text text-lighten-3">072 237 10 25</a></li>
+              <li><a class="grey-text text-lighten-3">pabarbacke@gmail.com</a></li>
+            </ul>
           </div>
         </div>
-        <%= form_tag charges_path do %>
-          <article>
-            <% if flash[:error].present? %>
-              <div id="error_explanation">
-                <p><%= flash[:error] %></p>
-              </div>
-            <% end %>
-          </article>
-
-          <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                  data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-                  data-description="På Bar Backe Påsar"
-                  data-amount="8000"
-                  data-locale="auto"></script>
-        <% end %>
-
-    </div>
-  </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        © 2018 På Bar Backe
+        </div>
+      </div>
+    </footer>
 
 </html>

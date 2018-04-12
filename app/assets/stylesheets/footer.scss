@@ -1,0 +1,32 @@
+.fa-ul {
+	overflow: auto;
+}
+
+.fa-ul li {
+	list-style-type: none;
+	float: left;
+}
+
+.fa-ul li a .fa {
+	color: #fff;
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	font-size: 25px !important;
+	text-align: center;
+	margin-right: 10px;
+	padding-top: 15%;
+  color: white;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook  {
+    background: #3B5998;
+}
+
+.fa-instagram {
+  background: #cd486b;
+}
