@@ -2,9 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-html {
-
-}
 
 .modal {
   background-color: white;
@@ -24,26 +21,36 @@ html {
   border-color: yellow;
 }
 
-/* label focus color */
-.input-field input[type=email]:focus + label {
-  color: yellow;
+/* label underline focus color */
+.input-field input[type=password]:focus {
+  border-bottom: 1px solid yellow !important;
+  box-shadow: 0 1px 0 0 yellow !important;
 }
+
 /* label underline focus color */
 .input-field input[type=email]:focus {
-  border-bottom: 1px solid yellow;
-  box-shadow: 0 1px 0 0 yellow;
-}
-/* valid color */
-.input-field input[type=email].valid {
-  border-bottom: 1px solid yellow;
-  box-shadow: 0 1px 0 0 yellow;
-}
-/* invalid color */
-.input-field input[type=email].invalid {
-  border-bottom: 1px solid yellow;
-  box-shadow: 0 1px 0 0 yellow;
+  border-bottom: 1px solid yellow !important;
+  box-shadow: 0 1px 0 0 yellow !important;
 }
 /* icon prefix focus color */
 .input-field .prefix.active {
   color: yellow;
+}
+
+.login_fail {
+  margin-top: 2%;
+  margin-left: 2%;
+  position: absolute;
+  height: 7%;
+  width: 14%;
+  background-color: #ffd54f;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+}
+
+.login_fail p {
+  color: black;
+  text-align: center;
 }

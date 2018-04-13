@@ -1,0 +1,41 @@
+.login_fail {
+  margin-top: 2%;
+  margin-left: 2%;
+  position: absolute;
+  height: 7%;
+  width: 14%;
+  background-color: #ffd54f;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+}
+
+.login_fail p {
+  color: black;
+  text-align: center;
+}
+
+/* label underline focus color */
+.input-field input[type=password]:focus {
+  border-bottom: 1px solid yellow !important;
+  box-shadow: 0 1px 0 0 yellow !important;
+}
+
+/* label underline focus color */
+.input-field input[type=email]:focus {
+  border-bottom: 1px solid yellow !important;
+  box-shadow: 0 1px 0 0 yellow !important;
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+  color: yellow;
+}
+
+.modal {
+  background-color: white;
+  border-style: solid;
+  border-width: 2px;
+  border-color: yellow;
+  border-radius: 10px;
+}

@@ -14,11 +14,9 @@ Rails.application.routes.draw do
   get '/checkout', to:'checkout#index'
 
   post '/pay', to:'payments#create'
-
-  resources :payments, only: [:new, :create]
-  get 'payment-thanks', to: 'payments#thanks', as: 'payment_thanks'
+  get '/thankyou', to:'payments#index'
+  resources :payments, only: [:index, :new, :create]
   resources :charges, only: [:new, :create]
-  get 'thanks', to: 'charges#thanks', as: 'thanks'
   resources :posts
   root to: 'posts#index'
 end

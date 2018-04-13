@@ -1,3 +1,26 @@
 // Place all the styles related to the signup controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+input:focus {
+  border-bottom: 1px solid yellow !important;
+  box-shadow: 0 1px 0 0 yellow !important;
+  color: #FFFFFF;
+}
+
+main {
+  padding-left: 25%;
+  padding-right: 25%;
+  padding-top: 5%;
+  padding-bottom: 6%;
+
+}
+
+form {
+  border-radius: 15px;
+  padding-right: 4%;
+  padding-left: 4%;
+  padding-top: 6%;
+  padding-bottom: 6%;
+  background-color: #424242;
+}

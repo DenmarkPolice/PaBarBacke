@@ -3,16 +3,15 @@
   <%= stylesheet_link_tag "nav_bar" %>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= stylesheet_link_tag "modal" %>
 
+
+    <%= javascript_include_tag('modal.js') %>
   <!-- Footer essentials -->
   <%= stylesheet_link_tag "footer" %>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- Payment essentials -->
-  <%= stylesheet_link_tag "modal" %>
-
-
-    <%= javascript_include_tag('modal.js') %>
   <%= csrf_meta_tags %>
   <%= stylesheet_link_tag "payments" %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -20,6 +19,7 @@
   <script src="https://js.stripe.com/v3/"></script>
   <%= tag :meta, :name => "stripe-key", :content => STRIPE_PUBLIC_KEY %>
 </head>
+
 <% if flash[:error] != nil %>
   <div class="login_fail">
     <p><%= flash[:error] %> </p>
@@ -83,10 +83,6 @@
           </label>
         </div>
         <div class="group">
-          <label>
-            <span>Mail</span>
-            <input id="mail" name="mail" class="field input-field" placeholder="exempel@exempel.se" />
-          </label>
           <label>
             <span>Address</span>
             <input id="address-line1" name="address_line1" class="field input-field" placeholder="Origovägen 32" />
@@ -197,8 +193,6 @@
     document.querySelector('form').addEventListener('submit', function(e) {
       e.preventDefault();
       var options = {
-        name: document.getElementById('mail').value,
-        address_line1: document.getElementById('address-line1').value,
         address_line1: document.getElementById('address-line1').value,
         address_city: document.getElementById('address-city').value,
         address_zip: document.getElementById('address-zip').value,

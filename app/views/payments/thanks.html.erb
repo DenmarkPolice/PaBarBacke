@@ -1,3 +1,95 @@
-<h1>Payments#thanks</h1>
-<p>Find me in app/views/payments/thanks.html.erb</p>
-<p>IF YOU SEE THIS IT ACTUALLY WORKED</p>
+<head>
+  <!-- Website essentials -->
+  <%= stylesheet_link_tag "nav_bar" %>
+  <%= stylesheet_link_tag "payments" %>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Footer essentials -->
+  <%= stylesheet_link_tag "footer" %>
+  <%= stylesheet_link_tag "modal" %>
+
+
+    <%= javascript_include_tag('modal.js') %>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<% if flash[:error] != nil %>
+  <div class="login_fail">
+    <p><%= flash[:error] %> </p>
+  </div>
+<% end %>
+
+<!-- Modal with login form -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <%= form_with scope: :user, url: "/login", local: true do |f| %>
+
+    <div class="input-field col s6">
+      <i class="material-icons prefix">email</i>
+      <%= f.label :mail %>
+      <%= f.email_field :mail, :required => true %><br>
+    </div>
+
+    <div class="input-field col s6">
+      <i class="material-icons prefix">account_balance_wallet</i>
+      <%= f.label :password %>
+      <%= f.password_field :password, :required => true %><br>
+    </div>
+
+    <%= f.submit 'Login', :class => 'modal-action modal-close btn deep-orange darken-2' %>
+    <% end %>
+  </div>
+</div>
+<body>
+  <!-- Nav bar with icons -->
+  <nav>
+    <div class="nav-wrapper white">
+      <a class="black-text padding-left logo">På Bar Backe</a>
+      <ul class="right hide-on-med-and-down padding-right">
+        <li><a href="/" class="black-text"><i class="material-icons left black-text">home</i>Hem</a></li>
+        <li><a href="/vision" class="black-text"><i class="material-icons left">remove_red_eye</i>Vision</a></li>
+        <li><a href="/items" class="black-text"><i class="material-icons left">shopping_cart</i>Produkt</a></li>
+        <% if session[:user_id] == nil %>
+          <li><a href="#modal" class="modal-trigger black-text"><i class="material-icons left ">person</i>Logga in</a></li>
+            <li><a href="/signup" class=" black-text"><i class="material-icons left ">assignment</i>Registrera dig</a></li>
+        <% else %>
+          <li><a href="/logout" class="black-text"><i class=" material-icons left">exit_to_app</i>Logga ut</a></li>
+        <% end %>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <h1>Tack</h1>
+    <h3>För att just du väljer att hjälpa de hemlösa i Göteborg till en bättre vardag!<br><b>Tillsamans skapar vi ett bättre Göteborg </b></h3>
+    <p>Du får kvitto på allt till mailen strax</p>
+  </main>
+
+  <!-- Footer with Social media and contact -->
+  <footer class="page-footer grey darken-3">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Sociala medier</h5>
+          <ul class="fa-ul">
+            <li><a href="https://www.instagram.com/pabarbackeuf/"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="https://www.facebook.com/pabarbackeuf/"><i class="fa fa-facebook"></i></a></li>
+          </ul>
+        </div>
+
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Kontakta oss</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3">Origovägen 4</a></li>
+            <li><a class="grey-text text-lighten-3">072 237 10 25</a></li>
+            <li><a class="grey-text text-lighten-3">pabarbacke@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      © 2018 På Bar Backe
+      </div>
+    </div>
+  </footer>

@@ -12,7 +12,6 @@ gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
-gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
 #Encryption gem
@@ -22,13 +21,11 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'materialize-sass'
 gem 'material_icons'
 gem 'jquery-rails'
-gem 'jquery-turbolinks'
 
 
 #Payment gems
 gem 'stripe'
 gem 'figaro'
-gem 'activemerchant'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

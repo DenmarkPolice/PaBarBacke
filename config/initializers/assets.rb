@@ -16,6 +16,8 @@ Rails.application.config.assets.precompile += %w( nav_bar.css )
 Rails.application.config.assets.precompile += %w( pay.js )
 Rails.application.config.assets.precompile += %w( payments.css )
 Rails.application.config.assets.precompile += %w( sidebar.js )
+Rails.application.config.assets.precompile += %w( signup.css )
+Rails.application.config.assets.precompile += %w( modal.css )
 
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
