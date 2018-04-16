@@ -1,24 +1,5 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Pictures of the site: https://imgur.com/a/qncpQ
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The card input is a test version and not really crediting your card. You can test by using the testcard: cardnumber: 4242 4242 4242 4242, expire date: anything, cvc: anything.
