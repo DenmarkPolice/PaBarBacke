@@ -9,6 +9,8 @@ end
 gem 'rails', '~> 5.1.5'
 gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
+gem 'rb-inotify', '>= 0.9.7', '~> 0.9'
+gem 'rb-fsevent', '>= 0.9.4', '~> 0.9)'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'jbuilder', '~> 2.5'
