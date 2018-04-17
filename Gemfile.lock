@@ -202,6 +202,7 @@ DEPENDENCIES
   rails (~> 5.1.5)
   rb-fsevent (~> 0.9)
   rb-inotify (~> 0.9)
+  sass-listen
   sass-rails (~> 5.0)
   selenium-webdriver
   spring

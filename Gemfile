@@ -15,6 +15,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'pg'
 gem 'rb-fsevent', '~> 0.9'
 gem 'rb-inotify', '~> 0.9'
+gem 'sass-listen'
 
 #Encryption gem
 gem 'bcrypt', '~> 3.1.7'
