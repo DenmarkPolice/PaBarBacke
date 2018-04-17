@@ -5,11 +5,9 @@ one:
   efternamn: MyString
   mail: MyString
   password: MyString
-  bags: 1.5
 
 two:
   förnamn: MyString
   efternamn: MyString
   mail: MyString
   password: MyString
-  bags: 1.5
