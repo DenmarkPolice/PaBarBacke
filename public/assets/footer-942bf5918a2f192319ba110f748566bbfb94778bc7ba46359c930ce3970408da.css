@@ -1,0 +1,38 @@
+/* line 1, /home/denmarkpolice/git-repos/pa_bar_backe/app/assets/stylesheets/footer.scss */
+.fa-ul {
+  overflow: auto;
+}
+
+/* line 5, /home/denmarkpolice/git-repos/pa_bar_backe/app/assets/stylesheets/footer.scss */
+.fa-ul li {
+  list-style-type: none;
+  float: left;
+}
+
+/* line 10, /home/denmarkpolice/git-repos/pa_bar_backe/app/assets/stylesheets/footer.scss */
+.fa-ul li a .fa {
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  font-size: 25px !important;
+  text-align: center;
+  margin-right: 10px;
+  padding-top: 15%;
+  color: white;
+}
+
+/* line 22, /home/denmarkpolice/git-repos/pa_bar_backe/app/assets/stylesheets/footer.scss */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* line 26, /home/denmarkpolice/git-repos/pa_bar_backe/app/assets/stylesheets/footer.scss */
+.fa-facebook {
+  background: #3B5998;
+}
+
+/* line 30, /home/denmarkpolice/git-repos/pa_bar_backe/app/assets/stylesheets/footer.scss */
+.fa-instagram {
+  background: #cd486b;
+}

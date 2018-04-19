@@ -1,0 +1,36 @@
+/* line 5, /home/denmarkpolice/git-repos/pa_bar_backe/app/assets/stylesheets/items.scss */
+main {
+  display: flex;
+  padding-left: 18%;
+  padding-right: 18%;
+}
+
+/* line 10, /home/denmarkpolice/git-repos/pa_bar_backe/app/assets/stylesheets/items.scss */
+.img-container {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 65%;
+  padding-top: 10%;
+}
+
+/* line 17, /home/denmarkpolice/git-repos/pa_bar_backe/app/assets/stylesheets/items.scss */
+.img-container img {
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+  padding: 4%;
+}
+
+/* line 24, /home/denmarkpolice/git-repos/pa_bar_backe/app/assets/stylesheets/items.scss */
+.side-text {
+  padding-top: 18%;
+  flex: 1;
+}
+
+/* line 29, /home/denmarkpolice/git-repos/pa_bar_backe/app/assets/stylesheets/items.scss */
+.cutoff {
+  margin-top: 8%;
+  width: 80%;
+  height: 0.1%;
+  background-color: grey;
+}

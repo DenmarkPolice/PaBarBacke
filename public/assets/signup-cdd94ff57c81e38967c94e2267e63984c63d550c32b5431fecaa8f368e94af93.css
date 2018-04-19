@@ -1,0 +1,24 @@
+/* line 5, /home/denmarkpolice/git-repos/pa_bar_backe/app/assets/stylesheets/signup.scss */
+input:focus {
+  border-bottom: 1px solid yellow !important;
+  box-shadow: 0 1px 0 0 yellow !important;
+  color: #FFFFFF;
+}
+
+/* line 11, /home/denmarkpolice/git-repos/pa_bar_backe/app/assets/stylesheets/signup.scss */
+main {
+  padding-left: 25%;
+  padding-right: 25%;
+  padding-top: 5%;
+  padding-bottom: 6%;
+}
+
+/* line 19, /home/denmarkpolice/git-repos/pa_bar_backe/app/assets/stylesheets/signup.scss */
+form {
+  border-radius: 15px;
+  padding-right: 4%;
+  padding-left: 4%;
+  padding-top: 6%;
+  padding-bottom: 6%;
+  background-color: #424242;
+}

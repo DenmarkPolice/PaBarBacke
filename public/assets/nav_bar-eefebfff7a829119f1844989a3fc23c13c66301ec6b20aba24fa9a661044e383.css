@@ -1,0 +1,15 @@
+/* line 1, /home/denmarkpolice/git-repos/pa_bar_backe/app/assets/stylesheets/nav_bar.scss */
+.padding-right {
+  padding-right: 5%;
+}
+
+/* line 5, /home/denmarkpolice/git-repos/pa_bar_backe/app/assets/stylesheets/nav_bar.scss */
+.padding-left {
+  padding-left: 5%;
+}
+
+/* line 9, /home/denmarkpolice/git-repos/pa_bar_backe/app/assets/stylesheets/nav_bar.scss */
+.logo {
+  font-family: monospace;
+  font-size: 200%;
+}
