@@ -18,8 +18,6 @@ gem 'pg'
 gem 'bcrypt', '~> 3.1.7'
 
 #Style gems
-gem 'materialize-sass'
-gem 'material_icons'
 gem 'jquery-rails'
 gem 'rails_12factor'
 
