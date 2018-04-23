@@ -8,6 +8,7 @@ end
 
 gem 'rails', '~> 5.1.5'
 gem 'puma', '~> 3.7'
+gem 'jquery-rails'
 gem 'sass-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
