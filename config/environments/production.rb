@@ -47,6 +47,11 @@ Rails.application.configure do
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
 
+  # Debug mode disables concatenation and preprocessing of assets.
+  # This option may cause significant delays in view rendering with a large
+  # number of complex assets.
+  config.assets.debug = true
+
   # Use the lowest log level to ensure availability of diagnostic information
   # when problems arise.
   config.log_level = :debug
