@@ -12,3 +12,5 @@ STRIPE_PUBLISHABLE_KEY: pk_test_randomGeneratedCode
 STRIPE_SECRET_KEY: sk_test_randomGeneratedCode
 ```
 To generate your own stripe keys you need to get a stripe account at: https://stripe.com/se 
+
+A demo of the site can be found: https://tranquil-atoll-10545.herokuapp.com/
