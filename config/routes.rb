@@ -19,4 +19,6 @@ Rails.application.routes.draw do
   resources :charges, only: [:new, :create]
   resources :posts
   root to: 'posts#index'
+
+  get '/vision', to:'vision#index'
 end

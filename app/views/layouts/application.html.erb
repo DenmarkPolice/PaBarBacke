@@ -47,13 +47,13 @@
       <div class="modal-content">
         <%= form_with scope: :user, url: "/login", local: true do |f| %>
 
-        <div class="input-field col s6">
+        <div class="input-field">
           <i class="material-icons prefix">email</i>
           <%= f.label :mail %>
           <%= f.email_field :mail, :required => true %><br>
         </div>
 
-        <div class="input-field col s6">
+        <div class="input-field">
           <i class="material-icons prefix">account_balance_wallet</i>
           <%= f.label :password %>
           <%= f.password_field :password, :required => true %><br>

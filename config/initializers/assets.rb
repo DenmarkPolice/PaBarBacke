@@ -13,11 +13,10 @@ Rails.application.config.assets.precompile += %w( modal.js )
 Rails.application.config.assets.precompile += %w( parallax.js )
 Rails.application.config.assets.precompile += %w( footer.css )
 Rails.application.config.assets.precompile += %w( nav_bar.css )
-Rails.application.config.assets.precompile += %w( pay.js )
 Rails.application.config.assets.precompile += %w( payments.css )
-Rails.application.config.assets.precompile += %w( sidebar.js )
 Rails.application.config.assets.precompile += %w( signup.css )
 Rails.application.config.assets.precompile += %w( modal.css )
+Rails.application.config.assets.precompile += %w( vision.css )
 
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
