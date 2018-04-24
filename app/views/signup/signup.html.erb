@@ -1,92 +1,35 @@
 <head>
   <meta charset="utf-8">
-  <!-- Nav bar essentials -->
-  <%= stylesheet_link_tag "nav_bar" %>
-
-  <!-- Footer essentials -->
-  <%= stylesheet_link_tag "footer" %>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
-      <!-- Website essentials -->
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
       <%= stylesheet_link_tag "signup" %>
-    </head>
+  </head>
 
-    <body>
-      <!-- Nav bar with icons -->
-      <nav>
-        <div class="nav-wrapper white">
-          <a class="black-text padding-left logo">På Bar Backe</a>
-          <ul class="right hide-on-med-and-down padding-right">
-            <li><a href="/" class="black-text"><i class="material-icons left black-text">home</i>Hem</a></li>
-            <li><a href="/vision" class="black-text"><i class="material-icons left">remove_red_eye</i>Vision</a></li>
-            <li><a href="/items" class="black-text"><i class="material-icons left">shopping_cart</i>Produkt</a></li>
-            <% if session[:user_id] == nil %>
-              <li><a href="#modal" class="modal-trigger black-text"><i class="material-icons left ">person</i>Logga in</a></li>
-              <li><a href="/signup" class=" black-text"><i class="material-icons left ">assignment</i>Registrera dig</a></li>
-            <% else %>
-              <li><a href="/logout" class="black-text"><i class=" material-icons left">exit_to_app</i>Logga ut</a></li>
-            <% end %>
-          </ul>
-        </div>
-      </nav>
+  <body>
 
-  <main>
-    <%= form_for User.new do |form| %>
+    <main>
+      <%= form_for User.new do |form| %>
 
-    <div class="input-field">
-      <%= form.label :förnamn %><br>
-      <%= form.text_field :förnamn, :required => true %>
-    </div>
-
-    <div class="input-field">
-      <%= form.label :efternamn %><br>
-      <%= form.text_field :efternamn, :required => true %>
-    </div>
-
-    <div class="input-field">
-      <%= form.label :mail %><br>
-      <%= form.email_field :mail, :required => true %>
-    </div>
-
-    <div class="input-field">
-      <%= form.label :password %><br>
-      <%= form.password_field :password, :required => true %>
-    </div>
-
-      <%= form.submit 'Login', :class => 'btn deep-orange darken-2' %>
-    <% end %>
-  </main>
-
-  <!-- Footer with Social media and contact -->
-  <footer class="page-footer grey darken-3">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Sociala medier</h5>
-          <ul class="fa-ul">
-            <li><a href="https://www.instagram.com/pabarbackeuf/"><i class="fa fa-instagram"></i></a></li>
-            <li><a href="https://www.facebook.com/pabarbackeuf/"><i class="fa fa-facebook"></i></a></li>
-          </ul>
+        <div class="input-field">
+          <%= form.label :förnamn %><br>
+          <%= form.text_field :förnamn, :required => true %>
         </div>
 
-        <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Kontakta oss</h5>
-          <ul>
-            <li><a class="grey-text text-lighten-3">Origovägen 4</a></li>
-            <li><a class="grey-text text-lighten-3">072 237 10 25</a></li>
-            <li><a class="grey-text text-lighten-3">pabarbacke@gmail.com</a></li>
-          </ul>
+        <div class="input-field">
+          <%= form.label :efternamn %><br>
+          <%= form.text_field :efternamn, :required => true %>
         </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-      © 2018 På Bar Backe
-      </div>
-    </div>
-  </footer>
+
+        <div class="input-field">
+          <%= form.label :mail %><br>
+          <%= form.email_field :mail, :required => true %>
+        </div>
+
+        <div class="input-field">
+          <%= form.label :password %><br>
+          <%= form.password_field :password, :required => true %>
+        </div>
+
+        <%= form.submit 'Login', :class => 'btn deep-orange darken-2' %>
+      <% end %>
+    </main>
 
 </body>
