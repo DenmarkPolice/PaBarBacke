@@ -4,6 +4,11 @@ main {
   margin-left: 22%;
   margin-right: 22%;
 }
+
+h3 {
+  text-align: center;
+}
+
 .team {
   padding-top: 3%;
   display: flex;
@@ -29,6 +34,20 @@ main {
   height:1px;
 }
 
-.textblock {
-  background-color: white;
+.forsnack {
+  display: flex;
+  flex-direction: row;
+}
+
+.forsnack img {
+  width: 30%;
+  align-self: center;
+  flex: 0 0 auto;
+  height: auto;
+}
+
+p::first-letter {
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 1.5;
 }
