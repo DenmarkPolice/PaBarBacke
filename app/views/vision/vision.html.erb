@@ -1,4 +1,5 @@
 <head>
+  <link href="https://fonts.googleapis.com/css?family=Poppins|Roboto" rel="stylesheet">
   <%= stylesheet_link_tag "vision" %>
 </head>
 
@@ -14,9 +15,10 @@
     </div>
 
     <div class="cutoff"></div>
-    <h5>Vårt arbete</h5>
+    <h5>Vår vision</h5>
     <div class="forsnack">
-      <p>Lorem ipsum används ofta som exempeltext inom trycksaksframställning
+      <img src="<%= asset_path("work.PNG") %>">
+      <p class="first">Lorem ipsum används ofta som exempeltext inom trycksaksframställning
           och grafisk design för att visa hur till exempel ett dokument kommer
         att se ut när väl den riktiga texten är på plats. Lorem ipsum visar
          hur layout, teckensnitt och typografi samspelar, utan att texten,
@@ -29,13 +31,22 @@
                 nulla pariatur. Excepteur sint occaecat cupidatat non proident,
                  sunt in culpa qui officia deserunt mollit anim id est laborum.
       </p>
-      <img src="<%= asset_path("work.PNG") %>">
     </div>
-    <h5>Ord från vår VD</h5>
-    <p>Vi bakom På Bar Backe vill bringa uppmärksamhet till Göteborgs mest
-       utsatta människor. Eftersom vi i grunden är ett välgörenhetsföretag
-        så är vårt största mål att dra vårt strå till stacken. Men eftersom
-         frågan om hemlösa i Göteborg är en fråga vi vill lyfta så är all
-          publicitet positivt.</p>
+    <div class="vd">
+      <h5>Ord från vår VD</h5>
+      <p>Vi bakom På Bar Backe vill bringa uppmärksamhet till Göteborgs mest
+         utsatta människor. Eftersom vi i grunden är ett välgörenhetsföretag
+          så är vårt största mål att dra vårt strå till stacken. Men eftersom
+           frågan om hemlösa i Göteborg är en fråga vi vill lyfta så är all
+            publicitet positivt. Vi har alltid arbetat efter ett dynamiskt
+             företagsklimat där nya idéer alltid är välkomnande.
+              Därför har vi haft många lösningar och förändringar genom årets
+               lopp. Några av de avgörande var våra val av samarbete och hur vi
+                tryckte våra påsar. Det visade stort resultat under de krisande
+                 stunder då vi snabbt ändrat våra planer och gått ut med något
+                  oförberett och handskrivet. Men som alltid har vi överkommit
+                   rädslor och hinder med fantastisk bravur.
+      </p>
+    </div>
   </main>
 </body>
