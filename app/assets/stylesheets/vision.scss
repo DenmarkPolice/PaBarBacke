@@ -16,10 +16,15 @@ h3 {
   align-items: center;
 }
 
-.team img {
-  width: 15%;
+.team div {
+  justify-content: center;
+}
+
+.team div img {
+  width: 80%;
   border-radius: 1px;
   border: solid;
+  justify-content: center;
   margin: 2%;
   border-color: yellow;
   border-radius: 50%;
@@ -32,8 +37,6 @@ h5 {
 .cutoff {
   margin-bottom: 3%;
   background-color: grey;
-  text-align:center;
-  line-height:1px;
   width:100%;
   height:1px;
 }
@@ -43,7 +46,7 @@ h5 {
 }
 
 .forsnack img {
-  width: 12vw;
+  width: 7vw;
   align-self: center;
   float:right;
   height: auto;
@@ -74,4 +77,24 @@ p {
 
 .vd h5 {
   text-align: right;
+}
+
+@media only screen and (max-width: 1400px) {
+  .forsnack img {
+    width: 12vw;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .forsnack img {
+    width: 20vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .forsnack img {
+    display: none;
+  }
+
+
 }
