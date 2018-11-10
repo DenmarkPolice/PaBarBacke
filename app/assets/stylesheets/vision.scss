@@ -14,9 +14,12 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 1.5%;
 }
 
 .team div {
+  flex-direction: column;
+  display: flex;
   justify-content: center;
 }
 
@@ -24,10 +27,24 @@ h3 {
   width: 80%;
   border-radius: 1px;
   border: solid;
-  justify-content: center;
-  margin: 2%;
   border-color: yellow;
   border-radius: 50%;
+  display:block;
+  margin:auto;
+}
+
+.team div .general-text {
+  text-align: center;
+  margin: 4px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.team div p {
+  color: grey;
+}
+
+.team div h6 {
+
 }
 
 h5 {
