@@ -102,6 +102,15 @@ p {
   }
 }
 
+@media only screen and (max-width: 1150px) {
+  .team {
+    flex-wrap: wrap;
+  }
+  .team div {
+    padding-bottom: 10%;
+  }
+}
+
 @media only screen and (max-width: 900px) {
   .forsnack img {
     width: 20vw;
@@ -112,6 +121,7 @@ p {
   .forsnack img {
     display: none;
   }
+
 
 
 }
