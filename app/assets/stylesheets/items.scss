@@ -34,7 +34,7 @@ main {
 }
 
 @media only screen and (max-width: 750px) {
-  .img-container {
-    flex-direction: row;
+  .main {
+    flex-direction: column;
   }
 }
