@@ -15,16 +15,14 @@
   .nav-wrapper ul li a {
     font-size: 0;
   }
+
+  a .material-icons {
+    margin-right: 0px;
+  }
 }
 
 @media only screen and (max-width: 650px) {
   .nav-wrapper a {
     font-size: 0;
-  }
-}
-
-@media only screen and (max-width: 395px) {
-  .material-icons {
-    font-size: 15px !important;
   }
 }
